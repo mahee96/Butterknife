@@ -1,0 +1,27 @@
+<idea-plugin>
+  <version>1.0.0</version>
+  <change-notes>
+      Initial Release
+      </change-notes>
+  <id>com.mahee.butterknife</id>
+  <name>ButterKnife for Android Studio</name>
+  <vendor email="developer.mahee96@gmail.com" url="http://github.com/mahee96">mahee96</vendor>
+  <description>
+        Generates ButterKnife injection code in activities/fragments/adapters for Elements defined in XMLs.
+    </description>
+  <depends>com.intellij.modules.java</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.lang</depends>
+  <depends>org.jetbrains.android</depends>
+  <depends>com.intellij.modules.androidstudio</depends>
+  <idea-version since-build="201"/>
+  <actions>
+    <group id="ButterKnife" text="_Butterknife" description="ButterKnife plugin for Android Studio">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+      <action id="PerformAction" class="com.mahee.butterknife.action.PerformAction" text="_Bind Views" icon="AllIcons.Actions.Lightning" description="Creates butterknife injections for Views">
+        <keyboard-shortcut keymap="$default" first-keystroke="shift control B"/>
+        <add-to-group group-id="GenerateGroup" anchor="last"/>
+      </action>
+    </group>
+  </actions>
+</idea-plugin>
